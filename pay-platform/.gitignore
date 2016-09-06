@@ -1,0 +1,37 @@
+*.class
+# Package Files #
+*.war
+*.ear
+#eclipse
+.settings
+.classpath
+.project
+#target
+classes
+
+# idea
+*.iml
+*.eml
+*.imd
+*.ipr
+*.iws
+#idea
+.iml
+.im
+.idea
+run_task
+.DS_Store
+.tomcatplugin
+.settings
+META-INF
+.mymetadata
+.externalToolBuilders
+.mymetadata
+out
+logs
+classes
+
+*.war
+maven-archiver
+generated-sources
+target

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration debug="false"
+	xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="NORMAL" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="/data/logs/ebay/ebay.log" />
+		<param name="maxFileSize" value="50MB" />
+		<param name="maxBackupIndex" value="10" />
+		<param name="Encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Encoding" value="UTF-8" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss.SSS} %5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+
+
+	<!-- additivity=false 不适用root设置 -->
+	<logger name="com.kk" additivity="false">
+		<level value="info" />
+		<appender-ref ref="console" />
+		<appender-ref ref="NORMAL" />
+	</logger>
+
+    <!-- ebay-servlet.xml 中配置 打印异常栈信息 -->
+	<logger name="NORMAL" additivity="false">
+		<level value="info" />
+		<appender-ref ref="NORMAL" />
+		<appender-ref ref="console" />
+	</logger>
+
+	<root>
+		<level value="error" />
+		<appender-ref ref="NORMAL" />
+		<appender-ref ref="console" />
+	</root>
+</log4j:configuration>

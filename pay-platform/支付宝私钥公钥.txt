@@ -1,0 +1,17 @@
+创建应用。 并且设置  自己的私钥和公钥，自己的公钥要上传到支付宝， 查看支付宝的公钥。
+
+支付宝公钥： 支付宝公钥用来验证返回给开发者的信息是否是支付宝发送的。每个应用的支付宝公钥内容是一样的，使用下载的demo或sdk中自带的支付宝公钥即可；第三方应用使用的支付宝公钥，可以在对应的应用环境中“支付宝公钥”处查看。
+
+https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7629140.0.0.7W7fUQ&treeId=44&articleId=103242&docType=1
+
+
+
+自己的公钥和私钥(公钥上传到支付宝，本地使用私钥加密，支付宝用公钥解密)：
+
+ java 需要转成 pkcs8格式（头部不一样， 一般私钥头：-----BEGIN RSA PRIVATE KEY-----，  pkcs8私钥头：-----BEGIN PRIVATE KEY-----）。
+
+openssl pkcs8 -topk8 -inform PEM -in rsa_private_key.pem -outform PEM -nocrypt -out private_key_pkcs8.pem
+
+
+
+然后把 头部和尾部 信息去掉，并且把中间的回车去掉， 剩下就是  需要的公钥和私钥。
