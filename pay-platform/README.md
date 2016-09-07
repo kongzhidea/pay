@@ -2,14 +2,19 @@
 
 #### web-common
 * 一些公共的spring组件，util
+
 #### pay-api
 * 支付平台
+
 #### pay-service
 * 支付逻辑， 微信支付，支付宝支付
+
 #### pay-api-model 
 * ***支付平台对外提供的接口参数和返回值类型，以及签名计算法方式， 业务方引用 此工程， 调用样例均在 pay-api的test目录和pay-caller工程。***
+
 #### pay-caller
-* 业务方，通过http请求或者封装好的http的sdk 调用支付平台，
+* 业务方，通过http请求或者封装好的http的sdk 调用支付平台
+
 #### pay-admin
 * 支付平台后台
 
