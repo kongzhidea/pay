@@ -24,6 +24,8 @@ https://doc.open.alipay.com/doc2/detail.htm?spm=a219a.7629140.0.0.haqwFy&treeId=
     <version>1.5</version>
 </dependency>
 
+mvn install:install-file -DgroupId=com.alipay.api -DartifactId=alipay-sdk -Dversion=1.5 -Dpackaging=jar -Dfile=alipay-sdk-1.5.jar
+
 
 
 demo 下载：
