@@ -157,12 +157,6 @@
             <artifactId>spring-context-support</artifactId>
             <version>4.2.0.RELEASE</version>
         </dependency>
-        <!-- springside-core -->
-        <dependency>
-            <groupId>org.springside</groupId>
-            <artifactId>springside-core</artifactId>
-            <version>4.0.0.GA</version>
-        </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
