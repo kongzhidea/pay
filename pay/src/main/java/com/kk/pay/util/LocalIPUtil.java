@@ -3,6 +3,7 @@ package com.kk.pay.util;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
+import java.net.UnknownHostException;
 import java.util.Enumeration;
 
 public class LocalIPUtil {
@@ -29,6 +30,12 @@ public class LocalIPUtil {
                     return address.getHostAddress();
                 }
             }
+        }
+        try {
+            String ip = InetAddress.getLocalHost().getHostAddress();
+            return ip;
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
         }
 
         return null;

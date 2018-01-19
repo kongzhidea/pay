@@ -205,7 +205,7 @@
 </body>
 
 
-<script type="text/javascript" src="http://s.kk.cn/js/jquery.min.js"></script>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 
 <!-- 微信中使用支付宝,  见ap.js -->
 <script type="text/javascript" src="http://www.kk.com/js/ap.js"></script>
